@@ -9,14 +9,14 @@ class Solution(object):
         """
         
         self.graph = defaultdict(defaultdict)
-        #build the graph
+        #build the graph O(E)
         for (dividend, divisor),value in zip(equations,values):
             self.graph[dividend][divisor] = value
             self.graph[divisor][dividend] = float(1/value)
         
         #call dfs on each query one by one
         result = []
-        for query in queries:
+        for query in queries: #O(V+E) * n (Max time complexity)
             self.visited = set()
             if query[0] not in self.graph or query[1] not in self.graph:
                 result.append(float(-1))
@@ -28,7 +28,7 @@ class Solution(object):
                     result.append(answer)
         return result
     
-    def dfs(self,start, end):
+    def dfs(self,start, end): #(V+E)
         self.visited.add(start)
 
         if start == end:
@@ -51,6 +51,10 @@ class Solution(object):
     #handle below case in interview
         # if divisor == 0:
         #     raise Error("Divide by zero") #zero division error
+    #Total time complexity
+        #O(V+E) * n 
+    #Total Space complexity
+        #O(V+E) <- For the graph
 
 #         ["a","b"],["b","c"],["bc","cd"]
 #         [["a","c"],["c","b"],["bc","cd"],["cd","bc"]["c","a"]]
