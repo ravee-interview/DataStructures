@@ -31,7 +31,6 @@ class Solution(object):
 #         Questions:
         
 #         1. Are there any benefits of using dfs over bfs for this question?
-
         '''
     node   neighbor     potential bipartites
         0 : [1,3]       [2]
