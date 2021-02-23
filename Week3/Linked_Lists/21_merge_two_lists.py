@@ -51,6 +51,8 @@ class Solution(object):
         
         
         """
+        time complexity : o(n+m)
+        space complxity: o(1)
         tests
         l1      1 2 3
         l2       1 2 4
