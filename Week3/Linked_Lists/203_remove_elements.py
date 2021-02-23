@@ -16,16 +16,15 @@ class Solution(object):
             return None
     
         dummy_head = ListNode(-1)    
-        while head and head.val == val:
-            head = head.next
             
         dummy_head.next = head
-        ptr = head
+        ptr = dummy_head
         while ptr and ptr.next:
             if ptr.next.val == val:
                 ptr.next = ptr.next.next
             else: #also takes care of duplicates
                 ptr = ptr.next
+        head = dummy_head.next
         dummy_head = None
         return head
                 
