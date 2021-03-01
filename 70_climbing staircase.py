@@ -13,3 +13,8 @@ class Solution(object):
             first = second
             second = third
         return second
+    
+    """
+    time complexity : O(n)
+    space complexity : O(1)
+    """
