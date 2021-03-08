@@ -38,11 +38,3 @@ class Solution(object):
         return num_open == 0
     
     """
-
-            
-"""
-3 ( 
-2  )
-2 (
-
-"""
