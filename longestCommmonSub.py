@@ -32,4 +32,7 @@ class Solution(object):
         d "" a  ac ac
         e "" a  ac ace
         
+        o(m*n)
+        o(m*n)
+        
         '''
